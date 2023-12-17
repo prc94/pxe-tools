@@ -1,0 +1,18 @@
+#!ipxe
+
+menu Default boot script for pxe-tools container
+
+item shell Open iPXE shell
+item reboot Reboot system
+item poweroff Power off system
+
+choose target && goto ${target}
+
+:shell
+shell
+
+:reboot
+reboot
+
+:poweroff
+poweroff
