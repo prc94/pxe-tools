@@ -1,8 +1,8 @@
 # syntax=docker/dockerfile:1
 
-FROM debian:bookworm
+FROM alpine:3.19
 
-RUN apt update && apt install -y dnsmasq
+RUN apk update && apk add dnsmasq
 
 #ARG S6_OVERLAY_VERSION=3.1.6.2
 #ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-noarch.tar.xz /tmp
